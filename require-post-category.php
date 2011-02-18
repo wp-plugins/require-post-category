@@ -29,30 +29,32 @@ add_action('admin_footer-post.php', 'rpc_admin_footer_post_func');
 add_action('admin_footer-post-new.php', 'rpc_admin_footer_post_func');
 
 function rpc_admin_footer_post_func(){
-	echo "
-	<script>
-	jQuery(function($){
-		$('#publish, #save-post').click(function(e){
-			if($('#taxonomy-category input:checked').length==0){
-				alert('Oops, please select a category before publishing this post.');
-				e.stopImmediatePropagation();
-				return false;
-			}else{
-				return true;
-			}
-		});
-		var publish_click_events = $('#publish').data('events')['click'];
-		if(publish_click_events){
-			if(publish_click_events.length>1){
-				publish_click_events.unshift(publish_click_events.pop());
-			}
-		}
-		var save_click_events = $('#save-post').data('events')['click'];
-		if(save_click_events){
-		  if(save_click_events.length>1){
-			  save_click_events.unshift(save_click_events.pop());
-		  }
+	global $post_type;
+	if($post_type=='post'){
+		echo "<script>
+jQuery(function($){
+	$('#publish, #save-post').click(function(e){
+		if($('#taxonomy-category input:checked').length==0){
+			alert('Oops, please select a category before publishing this post.');
+			e.stopImmediatePropagation();
+			return false;
+		}else{
+			return true;
 		}
 	});
-	</script>";
+	var publish_click_events = $('#publish').data('events')['click'];
+	if(publish_click_events){
+		if(publish_click_events.length>1){
+			publish_click_events.unshift(publish_click_events.pop());
+		}
+	}
+	var save_click_events = $('#save-post').data('events')['click'];
+	if(save_click_events){
+	  if(save_click_events.length>1){
+		  save_click_events.unshift(save_click_events.pop());
+	  }
+	}
+});
+</script>";
+	}
 }
