@@ -9,7 +9,7 @@ Author URI: http://www.warpconduit.net
 License: GPL2
 */
 /*
-    Copyright 2011 Josh Hartman
+    Copyright 2013 Josh Hartman
     
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License, version 2, as 
@@ -42,17 +42,19 @@ jQuery(function($){
 			return true;
 		}
 	});
-	var publish_click_events = $('#publish').data('events')['click'];
+	var publish_click_events = $('#publish').data('events').click;
 	if(publish_click_events){
 		if(publish_click_events.length>1){
 			publish_click_events.unshift(publish_click_events.pop());
 		}
 	}
-	var save_click_events = $('#save-post').data('events')['click'];
-	if(save_click_events){
-	  if(save_click_events.length>1){
-		  save_click_events.unshift(save_click_events.pop());
-	  }
+	if($('#save-post').data('events') != null){
+		var save_click_events = $('#save-post').data('events').click;
+		if(save_click_events){
+		  if(save_click_events.length>1){
+			  save_click_events.unshift(save_click_events.pop());
+		  }
+		}
 	}
 });
 </script>";
