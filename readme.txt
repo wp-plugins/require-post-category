@@ -2,8 +2,8 @@
 Contributors: joshhartman
 Tags: post, category, require, force, publish, draft, admin
 Requires at least: 3.0
-Tested up to: 3.6
-Stable tag: 1.0.2
+Tested up to: 3.7
+Stable tag: 1.0.3
 
 Require users to choose a post category before saving a draft, updating a post, or publishing a post.  This applies to normal posts and may not be compatible with custom write panels or custom post types.
 
@@ -31,6 +31,9 @@ Leave a comment on the plugin homepage http://www.warpconduit.net/wordpress-plug
 1. Alert appears when you try to save a post without choosing a category
 
 == Changelog ==
+
+= 1.0.3 =
+* Added i18n support
 
 = 1.0.2 =
 * Updated for WordPress 3.6

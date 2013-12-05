@@ -3,10 +3,11 @@
 Plugin Name: Require Post Category
 Plugin URI: http://www.warpconduit.net/wordpress-plugins/require-post-category/
 Description: Require users to choose a post category before saving a draft or publishing.
-Version: 1.0.2
+Version: 1.0.3
 Author: Josh Hartman
 Author URI: http://www.warpconduit.net
 License: GPL2
+Text Domain: require-post-category
 */
 /*
     Copyright 2013 Josh Hartman
@@ -25,8 +26,13 @@ License: GPL2
     Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
+add_action('plugins_loaded', 'rpc_load_translation_files');
 add_action('admin_footer-post.php', 'rpc_admin_footer_post_func');
 add_action('admin_footer-post-new.php', 'rpc_admin_footer_post_func');
+
+function rpc_load_translation_files(){
+	load_plugin_textdomain( 'require-post-category', false, basename(dirname( __FILE__ )) . '/languages');
+}
 
 function rpc_admin_footer_post_func(){
 	global $post_type;
@@ -35,7 +41,7 @@ function rpc_admin_footer_post_func(){
 jQuery(function($){
 	$('#publish, #save-post').click(function(e){
 		if($('#taxonomy-category input:checked').length==0){
-			alert('Oops, please select a category before publishing this post.');
+			alert('" . __('Please select a category before publishing this post.', 'require-post-category') . "');
 			e.stopImmediatePropagation();
 			return false;
 		}else{
