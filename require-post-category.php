@@ -3,7 +3,7 @@
 Plugin Name: Require Post Category
 Plugin URI: http://www.warpconduit.net/wordpress-plugins/require-post-category/
 Description: Require users to choose a post category before saving a draft or publishing.
-Version: 1.0.3
+Version: 1.0.4
 Author: Josh Hartman
 Author URI: http://www.warpconduit.net
 License: GPL2
