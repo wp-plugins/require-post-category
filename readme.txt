@@ -5,11 +5,17 @@ Requires at least: 3.0
 Tested up to: 3.7
 Stable tag: 1.0.4
 
-Require users to choose a post category before saving a draft, updating a post, or publishing a post.  This applies to normal posts and may not be compatible with custom write panels or custom post types.
+Require users to choose a post category before saving a draft, updating a post, or publishing a post.
 
 == Description ==
 
-Tired of uncategorized posts? Use this simple plugin to require users to choose a post category before saving a draft, updating a post, or publishing a post.  This applies to normal posts and may not be compatible with custom write panels or custom post types.
+Tired of uncategorized posts? Use this simple plugin to require users to choose a post category before saving a draft, updating a post, or publishing a post.  This applies to normal posts and is not compatible with custom write panels or custom post types without modification.
+
+= Translators =
+
+* Spanish (es_ES) - [Andrew Kurtis - WebHostingHub](http://www.webhostinghub.com)
+
+If you have created your own language pack, or have an update of an existing one, you can send the [PO and MO files](http://codex.wordpress.org/Translating_WordPress) to [me](http://www.warpconduit.net/contact) so that I can bundle it into the plugin. [Download the latest POT file](http://plugins.svn.wordpress.org/require-post-category/trunk/languages/require-post-category.pot).
 
 == Installation ==
 
