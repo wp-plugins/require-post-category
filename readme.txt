@@ -2,7 +2,7 @@
 Contributors: joshhartman
 Tags: post, category, require, force, publish, draft, admin
 Requires at least: 3.0
-Tested up to: 3.8
+Tested up to: 4.2
 Stable tag: 1.0.4
 
 Require users to choose a post category before saving a draft, updating a post, or publishing a post.
